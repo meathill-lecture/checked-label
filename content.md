@@ -63,6 +63,42 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 
 ## 替换初始的 `radio` 和 `checkbox`
 
+```
+./sample/radio-checkbox.html
+```
+
+<!-- page -->
+
+## 开关组件
+
+```
+./sample/switch.html
+```
+
+<!-- page -->
+
+## 多选组件
+
+```
+./sample/multi-select.html
+```
+
+<!-- page -->
+
+## 星星打分组件
+
+```
+./sample/stars.html
+```
+
+<!-- page -->
+
+## 输入标签组件
+
+```
+./sample/tags.html
+```
+
 <!-- page -->
 
 Q&A
@@ -73,5 +109,4 @@ Q&A
 
 * [W3C Selectors Level 3](https://www.w3.org/TR/css3-selectors/)
 * [MDN 中文 CSS 选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors)
-
-
+* [纯CSS实现多选组件](http://blog.meathill.com/tech/fe/create-multiple-select-component-with-pure-css.html)

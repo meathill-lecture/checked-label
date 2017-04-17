@@ -1,0 +1,47 @@
+*,
+*:before,
+*:after
+  box-sizing border-box
+
+input
+  display none
+
+[type=radio],
+[type=checkbox]
+  & + label
+    padding-left 1.5rem
+    position relative
+
+    &:before
+      border 1px solid gray
+      content ''
+      width 1rem
+      height 1rem
+      position absolute
+      left 0
+      transition all 1s
+
+    &:after
+      content ''
+      position absolute
+      width 0.5rem
+      height 0.5rem
+      background-color green
+      top .5rem
+      left .5rem
+      margin-top -.25rem
+      margin-left -.25rem
+      opacity 0
+      transition all 1s
+
+  &:checked + label
+    &:before
+      border-color green
+
+    &:after
+      opacity 1
+
+[type=radio] + label
+  &:before,
+  &:after
+    border-radius 50%
