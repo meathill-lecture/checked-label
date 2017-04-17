@@ -1,0 +1,42 @@
+{
+  "name": "checked-label",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "live-server --port=8001 --host=localhost --ignore=.git,node_modules",
+    "watch:stylus": "stylus -w styl/screen.styl -o css/"
+  },
+  "author": {
+    "name": "Meathill",
+    "email": "meathill@gmail.com",
+    "url": "https://meathill.com/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT",
+      "for": "the sample code"
+    },
+    {
+      "type": "CC4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "for": "the slide"
+    }
+  ],
+  "devDependencies": {
+    "del": "^2.2.2",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "highlight.js": "^9.10.0",
+    "marked": "^0.3.6",
+    "meathill-reveal-theme": "^0.1.0",
+    "reveal-markdown-compiler": "^1.0.5",
+    "reveal.js": "^3.4.1",
+    "run-sequence": "^1.2.2"
+  }
+}
