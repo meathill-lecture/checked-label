@@ -15,7 +15,6 @@
   "license": "(CC-BY-NC-ND-4.0 OR MIT)",
   "devDependencies": {
     "del": "^2.2.2",
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.4",
     "gulp-rename": "^1.2.2",
@@ -30,7 +29,9 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "colors.css": "^2.3.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "vue": "^2.2.6"
   }
 }

@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>tags</title>
+
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../styl/tags.css">
 </head>
 <body>
 
+<div class="input-tags" id="app" @click="onClick">
+  <template v-for="(item, index) in tags">
+    <input type="checkbox" name="tags[]" :value="item.label" :id="'tags-' + index" @change="onChange(index)">
+    <label :for="'tags-' + index">{{item.label}}</label>
+  </template>
+  <form @submit.prevent="onSubmit">
+    <input type="text" name="tag">
+  </form>
+</div>
+
+<script src="../node_modules/vue/dist/vue.min.js"></script>
+<script src="tags.js"></script>
 </body>
 </html>
