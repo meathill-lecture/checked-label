@@ -1,0 +1,60 @@
+@import "core.styl"
+
+html
+  font-size 30px
+
+.switch
+  display none
+
+  + label
+    display inline-block
+    width 6rem
+    height 2rem
+    border-radius 1rem
+    background-color gray
+    position relative
+    cursor pointer
+    transition .2s all
+
+    &:hover
+      background-color lighten(gray, 10%)
+
+    &:before
+      content ''
+      width 1.6rem
+      height 1.6rem
+      border-radius 50%
+      background-color white
+      position absolute
+      top 0.2rem
+      left 0.2rem
+      transition .2s all
+      transform translate3d(0,0,0)
+      z-index 10
+
+    &:after
+      content attr(data-off)
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      line-height 2rem
+      text-align center
+      z-index 20
+      text-transform uppercase
+      color white
+
+  &:checked + label
+    background-color green
+
+    &:hover
+      background-color lighten(green, 10%)
+
+    &:before
+      transform translate3d(4rem,0,0)
+
+    &:after
+      font-family 'FontAwesome'
+      //content attr(data-on)
+      content '\f00c'

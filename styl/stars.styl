@@ -1,0 +1,35 @@
+@import "core.styl"
+
+.stars
+  display flex
+  font-size 3rem
+
+  input
+    display none
+
+    &:checked + label
+      &:before,
+      & ~ label:before
+        color red
+        content: '\f005'
+
+  label
+    display block
+    cursor pointer
+
+    &:not(first-of-type)
+      margin-left .5rem
+
+    &:before
+      font-family 'FontAwesome'
+      content '\f006'
+
+    &:hover
+      &:before,
+      ~ label:before
+        color red
+        content '\f005'
+
+    for n in 1..5
+      &:nth-of-type({n})
+        order 5 - n

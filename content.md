@@ -16,7 +16,8 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 
 ## 课程大纲
 
-1. 登场选择器介绍简介
+1. 登场选择器介绍
+2. 登场标签介绍
 2. 替换常规的 `radio` 和 `checkbox`
 3. 开关组件
 4. 多选组件
@@ -35,6 +36,8 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 2. 用来选择 `radio` 和 `checkbox` 处于选中状态的元素
 3. 亦可选择 `<select>` 中被选中的 `<option>`
 
+<!-- section -->
+
 ```html
 <input type="radio" checked>
 <input type="checkbox" checked>
@@ -45,10 +48,12 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 
 <!-- page -->
 
-## `+` `~`
+## `+` / `~`
 
 1. CSS3 新增兄弟选择器
 2. 用来选择某元素后面，[毗邻|所有] 同层级元素
+
+<!-- section -->
 
 ```html
 <ul>
@@ -58,6 +63,17 @@ description: the css selectors `:checked+label` can create a lot of useful compo
   <li></li> <!-- `.sample ~ *` 选到这里 -->
 </ul>
 ```
+
+<!-- page -->
+
+## 登场标签介绍
+
+<!-- page -->
+
+## `<input>` + `<label>`
+
+1. 今天的效果都是由它哥俩完成的
+2. `<label>` 的 `for` 属性是核心
 
 <!-- page -->
 

@@ -1,7 +1,7 @@
 {
   "name": "checked-label",
   "version": "0.1.0",
-  "description": "",
+  "description": "some showcase of creating components with input:checked + label",
   "scripts": {
     "start": "live-server --port=8001 --host=localhost --ignore=.git,node_modules",
     "watch:stylus": "stylus -w styl/screen.styl -o css/"
@@ -11,18 +11,8 @@
     "email": "meathill@gmail.com",
     "url": "https://meathill.com/"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://opensource.org/licenses/MIT",
-      "for": "the sample code"
-    },
-    {
-      "type": "CC4.0",
-      "url": "https://creativecommons.org/licenses/by/4.0/",
-      "for": "the slide"
-    }
-  ],
+  "repository": "git@github.com:meathill-lecture/checked-label.git",
+  "license": "(CC-BY-NC-ND-4.0 OR MIT)",
   "devDependencies": {
     "del": "^2.2.2",
     "font-awesome": "^4.7.0",
@@ -38,5 +28,9 @@
     "reveal-markdown-compiler": "^1.0.5",
     "reveal.js": "^3.4.1",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "colors.css": "^2.3.0",
+    "font-awesome": "^4.7.0"
   }
 }

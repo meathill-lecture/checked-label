@@ -1,0 +1,53 @@
+@import "core.styl"
+
+.multi-select
+  display flex
+  flex-direction row
+  flex-wrap wrap
+
+  input,
+  label
+    order 2 //所有选项、label顺序为2
+
+  hr
+    display none // 默认情况下，没选任何选项，分割线隐藏
+    order 1 // 分割线顺序为1
+    width 100% // 保证独霸一行
+
+  input[type=checkbox]
+    display: none
+
+    &:checked
+
+      + label
+        order: 0
+        background-color green
+        border-color darken(green, 5%)
+        color white
+
+        &:hover
+          background-color lighten(green, 10%)
+          border-color: lighten(green, 5%)
+
+      ~ hr
+        display block // 有选项被选中后才会显示分割线
+
+  label
+    line-height 3rem
+    flex 1 1 30%
+    max-width 33%
+    border: 1px solid silver
+    text-align: center
+    margin: 0 1rem 1rem 0
+    background: white
+    border-radius: .25rem
+    cursor: pointer;
+    transition .2s all
+
+    &:hover
+      border-color: darken(silver, 15%);
+      background: darken(white, 15%);
+
+  hr
+    border-style dashed
+    border-width .25rem
