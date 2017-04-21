@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>checked-label</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="//cdn.staticfile.org/reveal.js/3.4.1/css/reveal.min.css">
+  <link rel="stylesheet" href="//cdn.staticfile.org/reveal.js/3.4.1/css/theme/moon.min.css">
+  <link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/darcula.min.css">
+  <link rel="stylesheet" href="//meathill-lecture.github.io/box-flex-grid/css/meathill-reveal-theme.min.css">
+  <link href="//fonts.lug.ustc.edu.cn/css?family=Source+Code+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="./css/screen.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+    <section><h1 id="-checked-label-"><code>:checked + label</code></h1><h4 id="-meathill-https-weibo-com-meathill-"><a href="https://weibo.com/meathill/">@meathill</a></h4></section><section><h2 id="-">关于作者</h2><p><img src="http://qiniu.meathill.com/wp-content/uploads/2016/07/20160607_005422423_iOS-825x510.jpg" alt="我的靓照" height="400"></p><p>大家好，我是翟路佳。全栈工程师，编程爱好者。</p><p><a href="http://blog.meathill.com">博客</a> | <a href="http://weibo.com/meathill">微博</a></p></section><section><h2 id="-">课程大纲</h2><ol><li>登场选择器介绍</li><li>登场标签介绍</li><li>替换常规的 <code>radio</code> 和 <code>checkbox</code></li><li>开关组件</li><li>多选组件</li><li>星星打分组件</li><li>结合 Vue 做标签输入组件</li></ol></section><section><h2 id="-">登场选择器介绍</h2></section><section><section><h2 id="-checked-"><code>:checked</code></h2><ol><li>CSS3 新增伪类选择器</li><li>用来选择 <code>radio</code> 和 <code>checkbox</code> 处于选中状态的元素</li><li>亦可选择 <code>&lt;select&gt;</code> 中被选中的 <code>&lt;option&gt;</code></li></ol></section><section><pre><code class="lang-html">&lt;input type=&quot;radio&quot; checked&gt;
+&lt;input type=&quot;checkbox&quot; checked&gt;
+&lt;select&gt;
+  &lt;option selected&gt;Some Value&lt;/option&gt;
+&lt;/select&gt;
+</code></pre></section></section><section><section><h2 id="-"><code>+</code> / <code>~</code></h2><ol><li>CSS3 新增兄弟选择器</li><li>用来选择某元素后面，[毗邻|所有] 同层级元素</li></ol></section><section><pre><code class="lang-html">&lt;ul&gt;
+  &lt;li class=&quot;sample&quot;&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt; &lt;!-- `.sample + *` 选到这里 --&gt;
+  &lt;li&gt;&lt;/li&gt; 
+  &lt;li&gt;&lt;/li&gt; &lt;!-- `.sample ~ *` 选到这里 --&gt;
+&lt;/ul&gt;
+</code></pre></section></section><section><h2 id="-">登场标签介绍</h2></section><section><h2 id="-input-label-"><code>&lt;input&gt;</code> + <code>&lt;label&gt;</code></h2><ol><li>今天的效果都是由它哥俩完成的</li><li><code>&lt;label&gt;</code> 的 <code>for</code> 属性是核心</li></ol></section><section><h2 id="-radio-checkbox-">替换初始的 <code>radio</code> 和 <code>checkbox</code></h2><pre><code>./sample/radio-checkbox.html
+</code></pre></section><section><h2 id="-">开关组件</h2><pre><code>./sample/switch.html
+</code></pre></section><section><h2 id="-">多选组件</h2><pre><code>./sample/multi-select.html
+</code></pre></section><section><h2 id="-">星星打分组件</h2><pre><code>./sample/stars.html
+</code></pre></section><section><h2 id="-">输入标签组件</h2><pre><code>./sample/tags.html
+</code></pre></section><section><p>Q&amp;A</p></section><section><p>参考阅读：</p><ul><li><a href="https://www.w3.org/TR/css3-selectors/">W3C Selectors Level 3</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors">MDN 中文 CSS 选择器</a></li><li><a href="http://blog.meathill.com/tech/fe/create-multiple-select-component-with-pure-css.html">纯CSS实现多选组件</a></li></ul></section>
+  </div>
+</div>
+<script src="//cdn.staticfile.org/reveal.js/3.4.1/lib/js/head.min.js"></script>
+<script src="//cdn.staticfile.org/reveal.js/3.4.1/js/reveal.min.js"></script>
+<script src="./app/main.js"></script>
+</body>
+</html>
