@@ -24,7 +24,7 @@
     "highlight.js": "^9.10.0",
     "marked": "^0.3.6",
     "meathill-reveal-theme": "^0.1.0",
-    "reveal-markdown-compiler": "^1.0.5",
+    "reveal-markdown-compiler": "^1.0.6",
     "reveal.js": "^3.4.1",
     "run-sequence": "^1.2.2"
   },
