@@ -17,7 +17,7 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 
 1. 了解组件化
 2. 学会使用 Stylus 编写 CSS
-3. 了解 `:checke`/`+`/`~` 等选择器
+3. 了解 `:checked`/`+`/`~` 等选择器
 4. 了解 CSS 动画基础
 5. 学会组合使用 CSS 属性
 
@@ -106,7 +106,7 @@ description: the css selectors `:checked+label` can create a lot of useful compo
   <li class="sample"></li>
   <li></li> <!-- `.sample + *` 选到这里 -->
   <li></li> 
-  <li></li> <!-- `.sample ~ *` 选到这里 -->
+  <li></li> <!-- `.sample ~ *` 从第二个 `<li>` 到这里 -->
 </ul>
 ```
 
@@ -119,7 +119,7 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 ### `<input>` + `<label>`
 
 1. 今天的效果都是由它哥俩完成的
-2. `<label>` 的 `for` 属性是核心
+2. `<label for="some-input-id">` 将 label 事件绑定到 `#some-input-id`
 
 <!-- page -->
 
@@ -187,3 +187,4 @@ Q&A
 * [MDN 中文 CSS 选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors)
 * [纯CSS实现多选组件](http://blog.meathill.com/tech/fe/create-multiple-select-component-with-pure-css.html)
 * [MDN 中文 transition](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition)
+* [CSS 父元素如何通过判断子元素来设置样式](https://segmentfault.com/q/1010000000641252/a-1020000000641608)
