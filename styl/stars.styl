@@ -7,11 +7,18 @@
   input
     display none
 
-    &:checked + label
-      &:before,
-      & ~ label:before
-        color red
-        content: '\f005'
+    &:checked
+      + label
+        &:before,
+        & ~ label:before
+          color red
+          content: '\f005'
+
+      for n in 1..5
+        $count = 6 - n
+        &:nth-of-type({$count}) ~ .description:after
+          $option = data-option- + n
+          content attr($option)
 
   label
     display block
@@ -33,3 +40,6 @@
     for n in 1..5
       &:nth-of-type({n})
         order 5 - n
+
+  .description
+    order 10

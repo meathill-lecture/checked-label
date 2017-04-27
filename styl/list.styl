@@ -1,0 +1,27 @@
+@import "core.styl"
+
+.select-list
+
+  label
+    border 2px solid gray
+    border-radius .25rem
+    display flex
+    flex-direction row
+    margin .5rem
+    padding .5rem
+    cursor pointer
+
+    img
+      border-radius 50%
+      width 2rem
+      height 2rem
+      margin-right .5rem
+
+    h3
+      font-size .6rem
+      line-height 2rem
+      margin 0
+
+  :checked + label
+    border-color red
+    background-color lighten(pink,50%)

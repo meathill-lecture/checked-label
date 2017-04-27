@@ -20,6 +20,7 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 3. 了解 `:checked`/`+`/`~` 等选择器
 4. 了解 CSS 动画基础
 5. 学会组合使用 CSS 属性
+6. 学会使用 `<label>` 包装点选模块
 
 <!-- page -->
 
@@ -29,7 +30,7 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 2. 登场选择器介绍
 3. 登场标签介绍
 4. CSS 动画基础
-5. 组件开发实战
+5. 组件开发实战 **&times;6**<!-- .element: class="red" -->
 
 <!-- page -->
 
@@ -37,7 +38,7 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 
 1. 把常用的功能、UI 封装成一个个独立的组件
 2. 组件通常有统一的视觉规范和接口规范
-3. 业务逻辑的开发，可以视作组件拼接的过程
+3. 开发业务逻辑，可以视作拼接组件
 
 <!-- section -->
 
@@ -82,6 +83,8 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 2. 用来选择 `radio` 和 `checkbox` 处于选中状态的元素
 3. 亦可选择 `<select>` 中被选中的 `<option>`
 
+> 由于 CSS 极低的编程能力，这个选择器几乎是我们唯一的依赖。
+
 <!-- section -->
 
 ```html
@@ -104,9 +107,9 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 ```html
 <ul>
   <li class="sample"></li>
-  <li></li> <!-- `.sample + *` 选到这里 -->
+  <li></li> <!-- `.sample + *` 选择这个元素 -->
   <li></li> 
-  <li></li> <!-- `.sample ~ *` 从第二个 `<li>` 到这里 -->
+  <li></li> <!-- `.sample ~ *` 选择第二个 `<li>` 到这个元素 -->
 </ul>
 ```
 
@@ -116,18 +119,39 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 
 <!-- page -->
 
-### `<input>` + `<label>`
+### `<input>`
 
-1. 今天的效果都是由它哥俩完成的
-2. `<label for="some-input-id">` 将 label 事件绑定到 `#some-input-id`
+1. `type="checkcbox"`
+    1. 复选框
+    2. 只有一个也可以作为开关
+    3. `name="q[]"` 以便提交给后端数组
+2. `type="radio"`
+    1. 单选框
+
+<!-- section -->
+
+### `<label>`
+
+1. 核心属性 `for="some-id"`，代理 `id="some-id"` 表单元素的点击事件
+2. 里面可以容纳任何其它元素
+3. 是单选框、复选框非常好的替代品
 
 <!-- page -->
 
 ## CSS 动画基础
 
-1. `transition: prop duration ease`
-2. 设置开始、结束属性
-2. `transform: translate3d(0,0,0)`
+1. 关键属性：`transition: prop duration [ease];`
+2. 设置开始属性、结束属性
+
+<!-- section -->
+
+移动设备触发 GPU 渲染：
+
+1. `transform: translate3d(0,0,0)`
+
+<!-- page -->
+
+## 实战开始！！
 
 <!-- page -->
 
@@ -174,6 +198,23 @@ description: the css selectors `:checked+label` can create a lot of useful compo
 * [tags.html](https://github.com/meathill-lecture/checked-label/blob/master/sample/tags.html)
 * [tags.styl](https://github.com/meathill-lecture/checked-label/blob/master/styl/tags.styl)
 * [tags.js](https://github.com/meathill-lecture/checked-label/blob/master/sample/tags.js)
+
+<!-- page -->
+
+## `<label>` 包装复杂内容
+
+范例文件：
+
+* [list.html](https://github.com/meathill-lecture/checked-label/blob/master/sample/list.html)
+* [list.styl](https://github.com/meathill-lecture/checked-label/blob/master/styl/list.styl)
+
+<!-- page -->
+
+## 其他可以开脑洞的选择器
+
+* `:valid` - `<input pattern="regexp">` 验证通过
+* `:indeterminate` - 单选/复选处于悬而未决状态
+* `:focus` - 文本框获得输入焦点
 
 <!-- page -->
 
